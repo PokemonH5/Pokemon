@@ -1,0 +1,220 @@
+{
+	"groups": [
+		{
+			"keys": "bg_jpg,egret_icon_png,description_json,player_png,girl_png,bg1_jpg,bg6_png,Black_png,bottomleft_png,bottomright_png,corssing_png,cube_bank_png,flower_jpg,free_tileset_version_10_png,grass01_png,gu_jpg,H_path_png,hexmini_png,isometric_grass_and_water_png,jing_jpg,maptiles_png,meta_tiles_png,perspective_walls_png,road_png,rockpath_png,sewer_tileset_png,sky_png,T_crossing_png,tiles_png,tilesheet_png,tmw_desert_spacing_png,topleft_png,topright_png,tree_png,tree2_png,tree3_jpg,tree4_jpg,V_path_png,star_png,barriers_png,ground_png,map1_txt",
+			"name": "preload"
+		}
+	],
+	"resources": [
+		{
+			"name": "bg_jpg",
+			"type": "image",
+			"url": "assets/bg.jpg"
+		},
+		{
+			"name": "egret_icon_png",
+			"type": "image",
+			"url": "assets/egret_icon.png"
+		},
+		{
+			"name": "description_json",
+			"type": "json",
+			"url": "config/description.json"
+		},
+		{
+			"name": "player_png",
+			"type": "image",
+			"url": "assets/player.png"
+		},
+		{
+			"name": "girl_png",
+			"type": "image",
+			"url": "assets/girl.png"
+		},
+		{
+			"name": "bg1_jpg",
+			"type": "image",
+			"url": "assets/bg1.jpg"
+		},
+		{
+			"name": "bg6_png",
+			"type": "image",
+			"url": "assets/bg6.png"
+		},
+		{
+			"name": "Black_png",
+			"type": "image",
+			"url": "assets/Black.png"
+		},
+		{
+			"name": "bottomleft_png",
+			"type": "image",
+			"url": "assets/bottomleft.png"
+		},
+		{
+			"name": "bottomright_png",
+			"type": "image",
+			"url": "assets/bottomright.png"
+		},
+		{
+			"name": "corssing_png",
+			"type": "image",
+			"url": "assets/corssing.png"
+		},
+		{
+			"name": "cube_bank_png",
+			"type": "image",
+			"url": "assets/cube_bank.png"
+		},
+		{
+			"name": "flower_jpg",
+			"type": "image",
+			"url": "assets/flower.jpg"
+		},
+		{
+			"name": "free_tileset_version_10_png",
+			"type": "image",
+			"url": "assets/free_tileset_version_10.png"
+		},
+		{
+			"name": "grass01_png",
+			"type": "image",
+			"url": "assets/grass01.png"
+		},
+		{
+			"name": "gu_jpg",
+			"type": "image",
+			"url": "assets/gu.jpg"
+		},
+		{
+			"name": "H_path_png",
+			"type": "image",
+			"url": "assets/H_path.png"
+		},
+		{
+			"name": "hexmini_png",
+			"type": "image",
+			"url": "assets/hexmini.png"
+		},
+		{
+			"name": "isometric_grass_and_water_png",
+			"type": "image",
+			"url": "assets/isometric_grass_and_water.png"
+		},
+		{
+			"name": "jing_jpg",
+			"type": "image",
+			"url": "assets/jing.jpg"
+		},
+		{
+			"name": "maptiles_png",
+			"type": "image",
+			"url": "assets/maptiles.png"
+		},
+		{
+			"name": "meta_tiles_png",
+			"type": "image",
+			"url": "assets/meta_tiles.png"
+		},
+		{
+			"name": "perspective_walls_png",
+			"type": "image",
+			"url": "assets/perspective_walls.png"
+		},
+		{
+			"name": "road_png",
+			"type": "image",
+			"url": "assets/road.png"
+		},
+		{
+			"name": "rockpath_png",
+			"type": "image",
+			"url": "assets/rockpath.png"
+		},
+		{
+			"name": "sewer_tileset_png",
+			"type": "image",
+			"url": "assets/sewer_tileset.png"
+		},
+		{
+			"name": "sky_png",
+			"type": "image",
+			"url": "assets/sky.png"
+		},
+		{
+			"name": "T_crossing_png",
+			"type": "image",
+			"url": "assets/T_crossing.png"
+		},
+		{
+			"name": "tiles_png",
+			"type": "image",
+			"url": "assets/tiles.png"
+		},
+		{
+			"name": "tilesheet_png",
+			"type": "image",
+			"url": "assets/tilesheet.png"
+		},
+		{
+			"name": "tmw_desert_spacing_png",
+			"type": "image",
+			"url": "assets/tmw_desert_spacing.png"
+		},
+		{
+			"name": "topleft_png",
+			"type": "image",
+			"url": "assets/topleft.png"
+		},
+		{
+			"name": "topright_png",
+			"type": "image",
+			"url": "assets/topright.png"
+		},
+		{
+			"name": "tree_png",
+			"type": "image",
+			"url": "assets/tree.png"
+		},
+		{
+			"name": "tree2_png",
+			"type": "image",
+			"url": "assets/tree2.png"
+		},
+		{
+			"name": "tree3_jpg",
+			"type": "image",
+			"url": "assets/tree3.jpg"
+		},
+		{
+			"name": "tree4_jpg",
+			"type": "image",
+			"url": "assets/tree4.jpg"
+		},
+		{
+			"name": "V_path_png",
+			"type": "image",
+			"url": "assets/V_path.png"
+		},
+		{
+			"name": "star_png",
+			"type": "image",
+			"url": "assets/star.png"
+		},
+		{
+			"name": "barriers_png",
+			"type": "image",
+			"url": "assets/barriers.png"
+		},
+		{
+			"name": "ground_png",
+			"type": "image",
+			"url": "assets/ground.png"
+		},
+		{
+			"name": "map1_txt",
+			"type": "text",
+			"url": "map/map1.txt"
+		}
+	]
+}
