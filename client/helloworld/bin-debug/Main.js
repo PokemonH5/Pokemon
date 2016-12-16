@@ -99,7 +99,7 @@ var Main = (function (_super) {
     p.createGameScene = function () {
         var stageW = this.stage.stageWidth;
         var stageH = this.stage.stageHeight;
-        this._player = new egret.Sprite();
+        this._player = new GamePlayer();
         var playerTexture = this.createBitmapByName("player_png");
         this._player.addChild(playerTexture);
         this.addChild(this._player);
@@ -111,7 +111,16 @@ var Main = (function (_super) {
         var playerWidth = playerTexture.width / 2;
         this.stage.addEventListener(egret.TouchEvent.TOUCH_TAP, this.clickEvent, this);
         this.getMapInfo(1);
-        this.getPosFromServer();
+        //this.getPosFromServer();
+    };
+    p.locationEvent = function (evt) {
+        //解决方案1：位置检测
+        if (evt._player_x > 100) {
+            console.log("", evt._player_x);
+            console.log("", evt._player_y);
+        }
+        //解决方案2 ：图层碰撞检测：待商榷
+        console.log("this is a test");
     };
     p.clickEvent = function (evt) {
         var xpos = Math.floor(evt.stageX / this._cellSize);
@@ -130,6 +139,12 @@ var Main = (function (_super) {
         this._grid.setStartNode(xpos2, ypos2);
         this._grid.setEndNode(xpos, ypos);
         this.findPath();
+        /********* 走到特定位置触发event START*************/
+        //注册侦听器
+        this._player.addEventListener(LocationEvent.LOCATE, this.locationEvent, this);
+        //发送Event
+        this._player.order();
+        /**********走到特定位置触发event  END*/
     };
     p.findPath = function () {
         var astar = new AStar2();
@@ -160,7 +175,7 @@ var Main = (function (_super) {
         if (dist < 1) {
             this._index++;
             if (this._index >= this._path.length) {
-                this.sendPosToServer(this._path[this._index - 1].x, this._path[this._index - 1].y);
+                //this.sendPosToServer(this._path[this._index -1].x,this._path[this._index -1].y);
                 this.removeEventListener(egret.Event.ENTER_FRAME, this.onEnterFrame, this);
             }
         }

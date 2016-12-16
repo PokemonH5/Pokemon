@@ -18,7 +18,7 @@ class Main extends egret.DisplayObjectContainer {
 
     private _cellSize: number = 32;
     private _grid: Grid;
-    private _player: egret.Sprite;
+    private _player: GamePlayer;
     private _index: number;
     private _path: NodePoint[];
 
@@ -135,7 +135,7 @@ class Main extends egret.DisplayObjectContainer {
         let stageW:number = this.stage.stageWidth;
         let stageH:number = this.stage.stageHeight;
         
-        this._player = new egret.Sprite();
+        this._player = new GamePlayer();
         var playerTexture:egret.Bitmap = this.createBitmapByName("player_png");
         this._player.addChild(playerTexture);
         this.addChild(this._player);
@@ -147,11 +147,24 @@ class Main extends egret.DisplayObjectContainer {
         let playerWidth = playerTexture.width/2;
 
         this.stage.addEventListener(egret.TouchEvent.TOUCH_TAP,this.clickEvent,this);
-
         this.getMapInfo(1);
-        this.getPosFromServer();
+        //this.getPosFromServer();
+
+
+    }
+
+    private locationEvent(evt: LocationEvent){
+        //解决方案1：位置检测
+        if (evt._player_x > 100){
+            console.log("", evt._player_x);
+            console.log("", evt._player_y)
+        }
+        //解决方案2 ：图层碰撞检测：待商榷
+
+        console.log("this is a test");
         
     }
+
 
     private clickEvent(evt:egret.TouchEvent){
         var xpos: number = Math.floor(evt.stageX / this._cellSize);
@@ -176,6 +189,14 @@ class Main extends egret.DisplayObjectContainer {
         
 
         this.findPath();
+
+
+        /********* 走到特定位置触发event START*************/
+        //注册侦听器
+        this._player.addEventListener(LocationEvent.LOCATE, this.locationEvent, this)
+        //发送Event
+        this._player.order();
+        /**********走到特定位置触发event  END*/
     }
 
     private findPath(): void {
@@ -210,7 +231,7 @@ class Main extends egret.DisplayObjectContainer {
         if(dist < 1) {
             this._index++;
             if(this._index >= this._path.length) {
-                this.sendPosToServer(this._path[this._index -1].x,this._path[this._index -1].y);
+                //this.sendPosToServer(this._path[this._index -1].x,this._path[this._index -1].y);
                 this.removeEventListener(egret.Event.ENTER_FRAME,this.onEnterFrame,this);
             }
         }

@@ -17,6 +17,7 @@ var game_file_list = [
 	"bin-debug/Jsonp.js",
 	"bin-debug/LoadingUI.js",
 	"bin-debug/Main.js",
+	"bin-debug/Player.js",
 	//----auto game_file_list end----
 ];
 
