@@ -175,7 +175,7 @@ var Main = (function (_super) {
         if (dist < 1) {
             this._index++;
             if (this._index >= this._path.length) {
-                //this.sendPosToServer(this._path[this._index -1].x,this._path[this._index -1].y);
+                this.sendPosToServer(this._path[this._index - 1].x, this._path[this._index - 1].y);
                 this.removeEventListener(egret.Event.ENTER_FRAME, this.onEnterFrame, this);
             }
         }
