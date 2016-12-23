@@ -136,15 +136,16 @@ class Main extends egret.DisplayObjectContainer {
         let stageH:number = this.stage.stageHeight;
         
         this._player = new GamePlayer();
-        var playerTexture:egret.Bitmap = this.createBitmapByName("player_png");
-        this._player.addChild(playerTexture);
+        this._player.constructor();
+        //var playerTexture:egret.Bitmap = this.createBitmapByName("player_png");
+        //this._player.addChild(playerTexture);
         this.addChild(this._player);
         this._player.anchorOffsetX = 16;
         this._player.anchorOffsetY = 16;
         this._player.x = 0;
         this._player.y = 160;
-        let playerHeight = playerTexture.height/2;
-        let playerWidth = playerTexture.width/2;
+       // let playerHeight = playerTexture.height/2;
+        //let playerWidth = playerTexture.width/2;
 
         this.stage.addEventListener(egret.TouchEvent.TOUCH_TAP,this.clickEvent,this);
         this.getMapInfo(1);
@@ -237,6 +238,8 @@ class Main extends egret.DisplayObjectContainer {
         }
         else {
             this._player.x += dx * .5;
+            var i = 5;
+            this._player.role.gotoAndPlay(0,i);
             this._player.y += dy * .5;
         }
     }

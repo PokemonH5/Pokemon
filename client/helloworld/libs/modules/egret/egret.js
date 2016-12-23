@@ -1531,8 +1531,7 @@ var egret;
          * @private
          * 沿着显示列表向下传递标志量，非容器直接设置自身的flag，此方法会在 DisplayObjectContainer 中被覆盖。
          */
-        p.$propagateFlagsDown = function (flags, cachedBreak) {
-            if (cachedBreak === void 0) { cachedBreak = false; }
+        p.$propagateFlagsDown = function (flags) {
             this.$setFlags(flags);
         };
         /**
@@ -4595,19 +4594,15 @@ var egret;
         /**
          * @private
          */
-        p.$propagateFlagsDown = function (flags, cachedBreak) {
-            if (cachedBreak === void 0) { cachedBreak = false; }
+        p.$propagateFlagsDown = function (flags) {
             if (this.$hasFlags(flags)) {
                 return;
             }
             this.$setFlags(flags);
-            if (cachedBreak && this.$displayList) {
-                return;
-            }
             var children = this.$children;
             var length = children.length;
             for (var i = 0; i < length; i++) {
-                children[i].$propagateFlagsDown(flags, cachedBreak);
+                children[i].$propagateFlagsDown(flags);
             }
         };
         d(p, "numChildren"
@@ -4731,7 +4726,7 @@ var egret;
             }
             var displayList = this.$displayList || this.$parentDisplayList;
             this.assignParentDisplayList(child, displayList, displayList);
-            child.$propagateFlagsDown(1648 /* DownOnAddedOrRemoved */, true);
+            child.$propagateFlagsDown(1648 /* DownOnAddedOrRemoved */);
             this.$propagateFlagsUp(4 /* InvalidBounds */);
             this.$childAdded(child, index);
             return child;
@@ -4937,7 +4932,7 @@ var egret;
             }
             var displayList = this.$displayList || this.$parentDisplayList;
             this.assignParentDisplayList(child, displayList, null);
-            child.$propagateFlagsDown(1648 /* DownOnAddedOrRemoved */, true);
+            child.$propagateFlagsDown(1648 /* DownOnAddedOrRemoved */);
             child.$setParent(null);
             var indexNow = children.indexOf(child);
             if (indexNow != -1) {
@@ -12135,7 +12130,6 @@ var egret;
     locale_strings[1047] = "egret.localStorage.setItem save failed,key={0}&value={1}";
     locale_strings[1048] = "Video loading failed";
     locale_strings[1049] = "In the absence of sound is not allowed to play after loading";
-    locale_strings[1050] = "ExternalInterface calls the method without js registration: {0}";
     //gui  3000-3099
     locale_strings[3000] = "Theme configuration file failed to load: {0}";
     locale_strings[3001] = "Cannot find the skin name which is configured in Theme: {0}";
@@ -12283,7 +12277,6 @@ var egret;
     locale_strings[1047] = "egret.localStorage.setItem保存失败,key={0}&value={1}";
     locale_strings[1048] = "视频加载失败";
     locale_strings[1049] = "声音在没有加载完之前不允许播放";
-    locale_strings[1050] = "ExternalInterface调用了js没有注册的方法: {0}";
     //gui  3000-3099
     locale_strings[3000] = "主题配置文件加载失败: {0}";
     locale_strings[3001] = "找不到主题中所配置的皮肤类名: {0}";
@@ -16980,7 +16973,8 @@ var egret;
                     this.renderText(node, context);
                     break;
                 case 3 /* GraphicsNode */:
-                    return this.renderGraphics(node, context, forHitTest);
+                    drawCalls = 1;
+                    this.renderGraphics(node, context, forHitTest);
                     break;
                 case 4 /* GroupNode */:
                     drawCalls = this.renderGroup(node, context);
@@ -17195,7 +17189,6 @@ var egret;
                         break;
                 }
             }
-            return length == 0 ? 0 : 1;
         };
         p.renderPath = function (path, context) {
             context.beginPath();
@@ -17839,7 +17832,7 @@ var egret;
              * @platform Web,Native
              */
             ,function () {
-                return "3.2.5";
+                return "3.2.4";
             }
         );
         /**
@@ -19173,14 +19166,14 @@ var egret;
                     var value = "";
                     str = str.substring(title.length).trim();
                     if (str.charAt(0) == "\"") {
-                        next = str.indexOf("\"", 1);
-                        value = str.substring(1, next);
-                        next += 1;
+                        var next_1 = str.indexOf("\"", 1);
+                        value = str.substring(1, next_1);
+                        next_1 += 1;
                     }
                     else if (str.charAt(0) == "\'") {
-                        next = str.indexOf("\'", 1);
-                        value = str.substring(1, next);
-                        next += 1;
+                        var next_2 = str.indexOf("\'", 1);
+                        value = str.substring(1, next_2);
+                        next_2 += 1;
                     }
                     else {
                         value = str.match(/(\S)+/)[0];
