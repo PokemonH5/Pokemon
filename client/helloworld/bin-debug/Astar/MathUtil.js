@@ -68,4 +68,3 @@ var MathUtil = (function () {
     return MathUtil;
 }());
 egret.registerClass(MathUtil,'MathUtil');
-//# sourceMappingURL=MathUtil.js.map

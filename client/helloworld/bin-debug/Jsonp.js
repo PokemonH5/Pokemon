@@ -16,4 +16,3 @@ var JsonpReq = (function () {
     return JsonpReq;
 }());
 egret.registerClass(JsonpReq,'JsonpReq');
-//# sourceMappingURL=Jsonp.js.map

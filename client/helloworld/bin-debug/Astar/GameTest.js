@@ -12,4 +12,3 @@ var GameTest = (function (_super) {
     return GameTest;
 }(egret.DisplayObjectContainer));
 egret.registerClass(GameTest,'GameTest');
-//# sourceMappingURL=GameTest.js.map

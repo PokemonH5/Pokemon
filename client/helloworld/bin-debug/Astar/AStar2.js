@@ -203,4 +203,3 @@ var AStar2 = (function () {
     return AStar2;
 }());
 egret.registerClass(AStar2,'AStar2');
-//# sourceMappingURL=AStar2.js.map

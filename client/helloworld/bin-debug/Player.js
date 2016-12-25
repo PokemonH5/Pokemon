@@ -30,4 +30,3 @@ var LocationEvent = (function (_super) {
     return LocationEvent;
 }(egret.TouchEvent));
 egret.registerClass(LocationEvent,'LocationEvent');
-//# sourceMappingURL=Player.js.map

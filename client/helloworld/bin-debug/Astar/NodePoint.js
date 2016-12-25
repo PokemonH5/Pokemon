@@ -25,4 +25,3 @@ var NodePoint = (function () {
     return NodePoint;
 }());
 egret.registerClass(NodePoint,'NodePoint');
-//# sourceMappingURL=NodePoint.js.map
