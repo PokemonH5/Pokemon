@@ -100,15 +100,16 @@ var Main = (function (_super) {
         var stageW = this.stage.stageWidth;
         var stageH = this.stage.stageHeight;
         this._player = new GamePlayer();
-        var playerTexture = this.createBitmapByName("player_png");
-        this._player.addChild(playerTexture);
+        this._player.constructor();
+        //var playerTexture:egret.Bitmap = this.createBitmapByName("player_png");
+        //this._player.addChild(playerTexture);
         this.addChild(this._player);
         this._player.anchorOffsetX = 16;
         this._player.anchorOffsetY = 16;
         this._player.x = 0;
         this._player.y = 160;
-        var playerHeight = playerTexture.height / 2;
-        var playerWidth = playerTexture.width / 2;
+        // let playerHeight = playerTexture.height/2;
+        //let playerWidth = playerTexture.width/2;
         this.stage.addEventListener(egret.TouchEvent.TOUCH_TAP, this.clickEvent, this);
         this.getMapInfo(1);
         //this.getPosFromServer();
@@ -181,6 +182,7 @@ var Main = (function (_super) {
         }
         else {
             this._player.x += dx * .5;
+            this._player.role.gotoAndPlay(0, 5);
             this._player.y += dy * .5;
         }
     };
