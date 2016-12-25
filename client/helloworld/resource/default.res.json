@@ -1,7 +1,7 @@
 {
 	"groups": [
 		{
-			"keys": "bg_jpg,egret_icon_png,description_json,player_png,girl_png,bg1_jpg,bg6_png,Black_png,bottomleft_png,bottomright_png,corssing_png,cube_bank_png,flower_jpg,free_tileset_version_10_png,grass01_png,gu_jpg,H_path_png,hexmini_png,isometric_grass_and_water_png,jing_jpg,maptiles_png,meta_tiles_png,perspective_walls_png,road_png,rockpath_png,sewer_tileset_png,sky_png,T_crossing_png,tiles_png,tilesheet_png,tmw_desert_spacing_png,topleft_png,topright_png,tree_png,tree2_png,tree3_jpg,tree4_jpg,V_path_png,star_png,barriers_png,ground_png,map1_txt",
+			"keys": "bg_jpg,egret_icon_png,description_json,player_png,girl_png,bg1_jpg,bg6_png,Black_png,bottomleft_png,bottomright_png,corssing_png,cube_bank_png,flower_jpg,free_tileset_version_10_png,grass01_png,gu_jpg,H_path_png,hexmini_png,isometric_grass_and_water_png,jing_jpg,maptiles_png,meta_tiles_png,perspective_walls_png,road_png,rockpath_png,sewer_tileset_png,sky_png,T_crossing_png,tiles_png,tilesheet_png,tmw_desert_spacing_png,topleft_png,topright_png,tree_png,tree2_png,tree3_jpg,tree4_jpg,V_path_png,star_png,barriers_png,ground_png,map1_txt,VX非官方RTP素材整合第一弹-TileA2_爱给网_2gei_com_png,VX非官方RTP素材整合第一弹-TileE_爱给网_2gei_com_png",
 			"name": "preload"
 		}
 	],
@@ -215,6 +215,16 @@
 			"name": "map1_txt",
 			"type": "text",
 			"url": "map/map1.txt"
+		},
+		{
+			"name": "VX非官方RTP素材整合第一弹-TileA2_爱给网_2gei_com_png",
+			"type": "image",
+			"url": "assets/VX非官方RTP素材整合第一弹-TileA2_爱给网_2gei_com.png"
+		},
+		{
+			"name": "VX非官方RTP素材整合第一弹-TileE_爱给网_2gei_com_png",
+			"type": "image",
+			"url": "assets/VX非官方RTP素材整合第一弹-TileE_爱给网_2gei_com.png"
 		}
 	]
 }

@@ -43,7 +43,7 @@ class Main extends egret.DisplayObjectContainer {
         RES.loadConfig("resource/default.res.json", "resource/");
 
          /*初始化资源加载路径*/
-        this.url = "resource/assets/airos.tmx"; 
+        this.url = "resource/assets/Tang.tmx"; 
         /*初始化请求*/
         this.request = new egret.HttpRequest();
         /*监听资源加载完成事件*/

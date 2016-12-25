@@ -18,7 +18,7 @@ var Main = (function (_super) {
         RES.addEventListener(RES.ResourceEvent.CONFIG_COMPLETE, this.onConfigComplete, this);
         RES.loadConfig("resource/default.res.json", "resource/");
         /*初始化资源加载路径*/
-        this.url = "resource/assets/airos.tmx";
+        this.url = "resource/assets/Tang.tmx";
         /*初始化请求*/
         this.request = new egret.HttpRequest();
         /*监听资源加载完成事件*/
@@ -175,7 +175,7 @@ var Main = (function (_super) {
         if (dist < 1) {
             this._index++;
             if (this._index >= this._path.length) {
-                //this.sendPosToServer(this._path[this._index -1].x,this._path[this._index -1].y);
+                this.sendPosToServer(this._path[this._index - 1].x, this._path[this._index - 1].y);
                 this.removeEventListener(egret.Event.ENTER_FRAME, this.onEnterFrame, this);
             }
         }
@@ -278,4 +278,3 @@ var Main = (function (_super) {
     return Main;
 }(egret.DisplayObjectContainer));
 egret.registerClass(Main,'Main');
-//# sourceMappingURL=Main.js.map
